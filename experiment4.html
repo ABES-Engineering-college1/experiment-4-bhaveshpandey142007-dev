@@ -2,101 +2,40 @@
 <html>
 <head>
     <title>Hotel Room Booking Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .booking-form-container {
-            width: 450px;
-            margin: 40px auto;
-            border: 4px solid black;
-            padding: 25px 0 40px 0;
-            background: #fff;
-        }
-        .booking-form-container h1 {
-            text-align: center;
-            font-size: 2.3em;
-            margin-bottom: 22px;
-            font-family: Times New Roman, serif;
-        }
-        table {
-            margin: 0 auto;
-        }
-        input[type="text"], input[type="email"], input[type="tel"], input[type="date"], select, textarea {
-            width: 240px;
-            padding: 3px;
-            box-sizing: border-box;
-            margin-bottom: 8px;
-        }
-        textarea {
-            resize: none;
-            width: 330px;
-            height: 70px;
-        }
-        .form-buttons {
-            text-align: center;
-            margin-top: 8px;
-        }
-        .form-buttons input {
-            width: 98px;
-            padding: 5px 10px;
-            margin: 0 5px;
-        }
-    </style>
 </head>
 <body>
-    <div class="booking-form-container">
-        <h1>Hotel Room Booking Form</h1>
-        <form>
-            <table>
-                <tr>
-                    <td>Full Name:</td>
-                    <td><input type="text" name="fullname"></td>
-                </tr>
-                <tr>
-                    <td>Email:</td>
-                    <td><input type="email" name="email"></td>
-                </tr>
-                <tr>
-                    <td>Phone:</td>
-                    <td><input type="tel" name="phone"></td>
-                </tr>
-                <tr>
-                    <td>Check-in Date:</td>
-                    <td><input type="date" name="checkin"></td>
-                </tr>
-                <tr>
-                    <td>Check-out Date:</td>
-                    <td><input type="date" name="checkout"></td>
-                </tr>
-                <tr>
-                    <td>Room Type:</td>
-                    <td>
-                        <select name="roomtype">
-                            <option>Single Room</option>
-                            <option>Double Room</option>
-                            <option>Deluxe Room</option>
-                        </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Number of Guests:</td>
-                    <td><input type="text" name="guests"></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align:center;">Special Requests:</td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                        <textarea name="requests"></textarea>
-                    </td>
-                </tr>
-            </table>
-            <div class="form-buttons">
-                <input type="submit" value="Book Now">
-                <input type="reset" value="Reset Form">
-            </div>
-        </form>
-    </div>
+    <table align="center" border="4" cellpadding="20">
+        <tr>
+            <td>
+                <form>
+                    <center>
+                        <font size="7" face="Times New Roman"><b>Hotel Room Booking Form</b></font>
+                    </center>
+                    <br><br>
+                    Full Name: <input type="text" name="fullname"><br><br>
+                    Email: <input type="text" name="email"><br><br>
+                    Phone: <input type="text" name="phone"><br><br>
+                    Check-in Date: <input type="date" name="checkin"><br><br>
+                    Check-out Date: <input type="date" name="checkout"><br><br>
+                    Room Type:
+                    <select name="roomtype">
+                        <option>Single Room</option>
+                        <option>Double Room</option>
+                        <option>Deluxe Room</option>
+                    </select>
+                    <br><br>
+                    Number of Guests: <input type="text" name="guests"><br><br>
+                    <center>Special Requests:</center>
+                    <textarea name="requests" rows="4" cols="44"></textarea>
+                    <br><br>
+                    <center>
+                        <input type="submit" value="Book Now">
+                        <input type="reset" value="Reset Form">
+                    </center>
+                </form>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
+
