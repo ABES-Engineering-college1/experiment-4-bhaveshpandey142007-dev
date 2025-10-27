@@ -4,38 +4,57 @@
     <title>Hotel Room Booking Form</title>
 </head>
 <body>
-    <table align="center" border="4" cellpadding="20">
-        <tr>
-            <td>
-                <form>
-                    <center>
-                        <font size="7" face="Times New Roman"><b>Hotel Room Booking Form</b></font>
-                    </center>
-                    <br><br>
-                    Full Name: <input type="text" name="fullname"><br><br>
-                    Email: <input type="text" name="email"><br><br>
-                    Phone: <input type="text" name="phone"><br><br>
-                    Check-in Date: <input type="date" name="checkin"><br><br>
-                    Check-out Date: <input type="date" name="checkout"><br><br>
-                    Room Type:
-                    <select name="roomtype">
-                        <option>Single Room</option>
-                        <option>Double Room</option>
-                        <option>Deluxe Room</option>
-                    </select>
-                    <br><br>
-                    Number of Guests: <input type="text" name="guests"><br><br>
-                    <center>Special Requests:</center>
-                    <textarea name="requests" rows="4" cols="44"></textarea>
-                    <br><br>
-                    <center>
-                        <input type="submit" value="Book Now">
-                        <input type="reset" value="Reset Form">
-                    </center>
-                </form>
-            </td>
-        </tr>
-    </table>
+    <h1 style="text-align:center;">Hotel Room Booking</h1>
+    <form method="post" action="/submit_booking">
+        <fieldset>
+            <legend>Booking Details</legend>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter email address" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required><br><br>
+
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required><br><br>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required><br><br>
+
+            <label for="roomtype">Room Type:</label>
+            <select id="roomtype" name="roomtype" required>
+                <option value="">-- Select Room Type --</option>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="deluxe">Deluxe Room</option>
+                <option value="suite">Suite</option>
+            </select><br><br>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" max="10" value="1" required><br><br>
+
+            <label for="special">Special Requests:</label><br>
+            <textarea id="special" name="special" placeholder="Any special requests" rows="4" cols="40"></textarea><br><br>
+
+            <label for="card">Card Number:</label>
+            <input type="text" id="card" name="card" placeholder="Enter card number" required><br><br>
+
+            <label for="exp">Expiry Date:</label>
+            <input type="month" id="exp" name="exp" required><br><br>
+
+            <label for="cvv">CVV:</label>
+            <input type="password" id="cvv" name="cvv" placeholder="CVV" required><br><br>
+
+            <button type="submit">Book Now</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+    <p style="text-align:center; font-size:12px;">
+        © 2025 Hotel Booking Portal
+    </p>
 </body>
 </html>
 
